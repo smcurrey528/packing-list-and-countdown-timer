@@ -1,0 +1,76 @@
+/* colors */
+/* #dc412c
+seagreen
+goldenrod
+#e0732d
+cadetblue */
+
+body {
+  background-color: #e0732d;
+  color: black;
+  font-family: 'Montserrat Alternates', sans-serif;
+  text-align: center;
+  margin: auto 0;
+}
+
+h1 {
+  background-color: #dc412c;
+  color: goldenrod;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  text-align: center;
+  padding: 20px;
+}
+
+input, button {
+  background-color: white;
+}
+
+input {
+  border-radius: 20px;
+}
+.seagreen {
+  height: 20px;
+  background-color: seagreen;
+  margin: 20px 0 20px 0;
+
+}
+
+img {
+  height: 180px;
+}
+.pack {
+  background-color: cadetblue;
+  padding: 5px;
+  margin-top: 20px;
+  font-size: 20px;
+  border: 10px solid #dc412c;
+  border-radius: 30px;
+
+}
+
+
+footer {
+  margin: 30px;
+}
+
+.container {
+  color: #333;
+  text-align: center;
+}
+
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}

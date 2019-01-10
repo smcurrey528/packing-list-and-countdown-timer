@@ -1,0 +1,70 @@
+<html>
+    <head>
+      <link rel="stylesheet"  href="main.css">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,900" rel="stylesheet">
+    </head>
+    <body>
+      <h1>Namaste to the Darjeeling Limited</h1>
+      <p> भारत के लिए मेरी पैकिंग सूची </p>
+      <div class="seagreen"> </div>
+      <img src="https://i.imgur.com/WixQpWW.gif">
+
+
+      <h2> Packing List for India </h2>
+
+      <form id="input">
+        <input
+               placeholder="Add item here.."
+               type="text"
+               autocomplete="off"
+               id="addItem">
+      <button> Add it to the List!</button>
+      </form>
+      <div class="pack">
+        <h3> Make Sure To Pack: </h3>
+        <ul id="packingList">
+          <li> Mosquito Repellent
+            <button onclick="deleteItem(this)"> Remove </button>
+          </li>
+          <li> Passport
+            <button onclick="deleteItem(this)"> Remove </button>
+          </li>
+          <li> Indian rupees
+            <button onclick="deleteItem(this)"> Remove </button>
+          </li>
+          <li> Sunscreen
+            <button onclick="deleteItem(this)"> Remove </button>
+          </li>
+       </ul>
+      </div>
+
+
+      <div class="container">
+        <h1 id="head">Countdown until arriving in Delhi:</h1>
+        <ul>
+          <li><span id="days"></span>Days</li>
+          <li><span id="hours"></span>Hours</li>
+          <li><span id="minutes"></span>Minutes</li>
+          <li><span id="seconds"></span>Seconds</li>
+        </ul>
+      </div>
+
+      <footer>
+        <img src="https://timeentertainment.files.wordpress.com/2011/07/06_top10trainmovies.jpg?w=720&h=480&crop=1">
+      </footer>
+
+
+      <div class="container"
+        <h1 id="head"> Countdown until Sarah Returns</h1>
+        <ul>
+          <li><span id="day"></span>Days</li>
+          <li><span id="hour"></span>Hours</li>
+          <li><span id="minute"></span>Minutes</li>
+          <li><span id="second"></span>Seconds</li>
+        </ul>
+      </div>
+      <script src="app.js">
+      </script>
+    </body>
+
+</html>
