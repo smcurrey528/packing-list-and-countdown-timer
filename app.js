@@ -1,57 +1,38 @@
 // Section for Form Input for Packing List
-const form = document.getElementById('input'),
-      input = document.getElementById('addItem'),
-      list = document.getElementById('packingList');
+const form = document.getElementById("form"),
+      input = document.getElementById("addItem"),
+      list = document.getElementById("packingList");
 
-form.addEventListener('submit', function(e){
+form.addEventListener("submit", function(e) {
   e.preventDefault();
-  //console.log(input.value);
   addItemToList(input.value);
+});
 
-})
-
-const addItemToList = (item) => {
+const addItemToList = item => {
   let newItem = `<li>${item} <button onclick="deleteItem(this)"> Remove </button></li>`;
-  list.insertAdjacentHTML('beforeend', newItem);
-  input.value = '';
-}
+  list.insertAdjacentHTML("beforeend", newItem);
+  input.value = "";
+};
 
-const deleteItem = (elementToDelete) => {
-  elementToDelete.parentElement.remove();
-}
+const deleteItem = item => {
+  item.parentElement.remove();
+};
 
-// CountDown until in India
-const goalDate = new Date(2019, 0, 12).getTime();
-//console.log('goalDate', goalDate)
+// Countdown timer of time in India
+const days = document.getElementById('days'),
+      hours = document.getElementById('hours'),
+      mintes = document.getElementById('minutes'),
+      seconds = document.getElementById('seconds'),
+      endDate = new Date(2019, 0, 24);
 
-let x = setInterval(function() {
-  const today = new Date().getTime(),
-      difference = new Date(goalDate - today);
+const arriveInIndia = () => {
+  const now = new Date();
+  const difference = new Date(endDate - now);
+  console.log(difference)
+  days.innerText = Math.floor(difference / 86400000);
+  hours.innerText = difference.getHours();
+  minutes.innerText = difference.getMinutes();
+  seconds.innerText = difference.getSeconds();
+};
 
-  document.getElementById('days').innerText = Math.floor(difference/(86400000));
-
-  document.getElementById('hours').innerText = Math.floor(difference.getHours());
-
-  document.getElementById('minutes').innerText = Math.floor(difference.getMinutes());
-
-  document.getElementById('seconds').innerText = Math.floor(difference.getSeconds());
-
-}, 1000)
-
-//// CountDown until return
-const returnDate = new Date(2019, 0, 25).getTime();
-//console.log('goalDate', goalDate)
-
-let j = setInterval(function() {
-  const today = new Date().getTime(),
-      difference = new Date(returnDate - today);
-
-  document.getElementById('day').innerText = Math.floor(difference/(86400000));
-
-  document.getElementById('hour').innerText = Math.floor(difference.getHours());
-
-  document.getElementById('minute').innerText = Math.floor(difference.getMinutes());
-
-  document.getElementById('second').innerText = Math.floor(difference.getSeconds());
-
-}, 1000)
+setInterval(arriveInIndia, 1000);
